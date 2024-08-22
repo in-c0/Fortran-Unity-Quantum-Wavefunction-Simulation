@@ -21,7 +21,7 @@ This project simulates the behavior of quantum wavefunctions as they interact wi
 ### Steps
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/quantum-wave-simulation.git
+    git clone https://github.com/in-c0/quantum-wave-simulation.git
     cd quantum-wave-simulation
     ```
 
