@@ -7,10 +7,10 @@
 using System.IO;
 using System.Linq;
 using UnityEngine;
-
+using UnityEditor;
 public class WavefunctionVisualizer : MonoBehaviour
 {
-    public string relativePath = "Assets/Data/";
+    [ReadOnly] public string relativePath = "Data/"; // path begins from Assets/ ...  (= Application.dataPath)
     public GameObject wavePointPrefab;
     public float scaleFactor = 10f;
     private string[] dataFiles;
@@ -54,4 +54,22 @@ public class WavefunctionVisualizer : MonoBehaviour
             Debug.LogError("File not found: " + path);
         }
     }
+}
+
+
+[CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
+public class ReadOnlyDrawer : PropertyDrawer
+{
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+    {
+        bool previousGUIState = GUI.enabled;
+        GUI.enabled = false;
+        EditorGUI.PropertyField(position, property, label);
+        GUI.enabled = previousGUIState;
+    }
+}
+
+public class ReadOnlyAttribute : PropertyAttribute
+{
+    // This is just a marker class
 }
