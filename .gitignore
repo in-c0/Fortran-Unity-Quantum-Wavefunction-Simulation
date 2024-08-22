@@ -22,6 +22,7 @@ __pycache__/
 **/[Ll]ibrary/
 **/[Tt]emp/
 **/[Oo]bj/
+**/[Dd]ata/*.meta
 **/[Bb]uild/
 **/[Bb]uilds/
 **/[Ll]ogs/
