@@ -53,27 +53,30 @@ subroutine time_step(psi_real, psi_imag, potential, n, dx, dt)
     psi_real(2:n-1) = psi_real_new(2:n-1)
     psi_imag(2:n-1) = psi_imag_new(2:n-1)
 end subroutine time_step
-
 subroutine save_wavefunction(psi_real, psi_imag, n, step)
     implicit none
     integer, parameter :: dp = kind(1.0d0)
     integer :: i, n, step
     real(dp), intent(in) :: psi_real(n), psi_imag(n)
-    character(len=100) :: filename
+    character(len=200) :: filename_fortran, filename_unity
 
-    ! Generate the filename based on the current step
-    write(filename, '("..//data//wavefunction_", i4.4, ".dat")') step
+    ! Generate filenames for both directories
+    write(filename_fortran, '("..//data//wavefunction_", i4.4, ".dat")') step
+    write(filename_unity, '("../../Unity/Assets/Data/wavefunction_", i4.4, ".dat")') step
 
-    print *, "Writing to file: ", filename
-
-    ! Open the file for writing
-    open(unit=10, file=filename, status='replace', action='write')
-
-    ! Write the data
+    ! Write to the Fortran/data directory
+    print *, "Writing to file: ", filename_fortran
+    open(unit=10, file=filename_fortran, status='replace', action='write')
     do i = 1, n
         write(10, '(I6, 2F12.6)') i, psi_real(i), psi_imag(i)
     end do
-
-    ! Close the file
     close(10)
+
+    ! Write to the Unity/Assets/Data directory
+    print *, "Writing to file: ", filename_unity
+    open(unit=11, file=filename_unity, status='replace', action='write')
+    do i = 1, n
+        write(11, '(I6, 2F12.6)') i, psi_real(i), psi_imag(i)
+    end do
+    close(11)
 end subroutine save_wavefunction
