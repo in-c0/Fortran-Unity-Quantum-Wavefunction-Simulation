@@ -1,5 +1,3 @@
-! File: simulation.f90
-! This Fortran code simulates a simple wave packet moving through a potential barrier using the finite difference method. It outputs the wavefunction at each time step.
 program schrodinger_1d
     implicit none
     integer, parameter :: dp = kind(1.0d0)
@@ -64,7 +62,7 @@ subroutine save_wavefunction(psi_real, psi_imag, n, step)
     character(len=100) :: filename
 
     ! Generate the filename based on the current step
-    write(filename, '("Fortran/data/wavefunction_", i4.4, ".dat")') step
+    write(filename, '("..//data//wavefunction_", i4.4, ".dat")') step
 
     print *, "Writing to file: ", filename
 
