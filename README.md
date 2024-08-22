@@ -11,12 +11,17 @@ This project simulates the behavior of quantum wavefunctions as they interact wi
 - [Contributing](#contributing)
 - [License](#license)
 
+## Features
+(TBA)
+
 ## Installation
 
 ### Prerequisites
-- **Fortran Compiler**: Ensure you have a Fortran compiler installed (e.g., GNU Fortran, Intel Fortran).
+
+- **Fortran Compiler**: [Fortran compiler installed (e.g., GNU Fortran, Intel Fortran)]([url](https://fortran-lang.org/learn/os_setup/install_gfortran/ ))
 - **Unity**: Unity Hub and Unity Editor (version 2021.x or newer recommended).
 - **Git**: For version control and project management.
+
 
 ### Steps
 1. **Clone the Repository**:
