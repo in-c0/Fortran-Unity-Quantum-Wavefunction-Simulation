@@ -13,7 +13,7 @@ This project simulates the behavior of quantum wavefunctions as they interact wi
 
 ## Installation
 
-Please refer to the [Installation Guide](Docs/INSTALLATION.md) for detailed setup instructions.
+Please refer to the [Installation Guide](Docs/Installation.md) for detailed setup instructions.
 
 ### Prerequisites
 
