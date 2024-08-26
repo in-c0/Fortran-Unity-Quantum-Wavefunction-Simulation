@@ -2,6 +2,12 @@
 
 This project simulates the behavior of quantum wavefunctions as they interact with various potential barriers and wells in one dimension. The core of the simulation is written in Fortran, solving the time-dependent Schrödinger equation. The results are visualized in a Unity application, allowing users to explore quantum phenomena such as tunneling and interference.
 
+⚠️As of 26/08/2024, the project is in WIP and may not be functioning as described
+## TODO
+- Parsing data into Unity in a correct format
+- Error handling (e.g. NaN) implementation
+
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
