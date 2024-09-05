@@ -11,6 +11,7 @@ This project simulates the behavior of quantum wavefunctions as they interact wi
 
 
 ### Sources of Inspiration:
+- https://www.youtube.com/watch?v=MXs_vkc8hpY
 - https://www.falstad.com/mathphysics.html
 - https://lab.quantumflytrap.com/lab?mode=waves
 
